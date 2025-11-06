@@ -9,6 +9,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.trimmr.ui.booking.Booking;
+import com.example.trimmr.ui.booking.BookingManager;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class SalonDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -50,8 +57,26 @@ public class SalonDetailsActivity extends AppCompatActivity {
 
         // Book appointment button listener
         btnBookAppointment.setOnClickListener(v -> {
-            Toast.makeText(this, "Booking appointment at " + salonName, Toast.LENGTH_SHORT).show();
-            // TODO: Navigate to booking screen
+            // Generate a booking date/time (for demo purposes, using current date + 7 days)
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_MONTH, 7);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy - hh:mm a", Locale.getDefault());
+            String bookingDateTime = dateFormat.format(calendar.getTime());
+
+            // Create and save the booking
+            Booking booking = new Booking(
+                    salonName,
+                    salonLocation,
+                    salonService + ", Hair Wash",
+                    bookingDateTime,
+                    salonImage,
+                    "upcoming"
+            );
+
+            BookingManager.getInstance().addBooking(booking);
+
+            Toast.makeText(this, "Booking confirmed for " + salonName, Toast.LENGTH_SHORT).show();
+            finish(); // Return to previous screen
         });
     }
 }
