@@ -129,7 +129,22 @@ public class HomeFragment extends Fragment {
         salonRating.setText(String.valueOf(salon.getRating()));
         salonReviews.setText("(" + salon.getReviews() + ")");
         
+        // Add click listener to open salon details
+        cardView.setOnClickListener(v -> openSalonDetails(salon));
+        
         return cardView;
+    }
+
+    private void openSalonDetails(Salon salon) {
+        android.content.Intent intent = new android.content.Intent(getActivity(), com.example.trimmr.SalonDetailsActivity.class);
+        intent.putExtra("salon_name", salon.getName());
+        intent.putExtra("salon_location", salon.getLocation());
+        intent.putExtra("salon_distance", salon.getDistance());
+        intent.putExtra("salon_rating", salon.getRating());
+        intent.putExtra("salon_reviews", salon.getReviews());
+        intent.putExtra("salon_image", salon.getImageResource());
+        intent.putExtra("salon_service", salon.getService());
+        startActivity(intent);
     }
 
     @Override
