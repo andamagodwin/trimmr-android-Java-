@@ -15,9 +15,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorColor="@android:color/holo_blue_dark"
+        app:tabIndicatorColor="@color/primary_blue"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/holo_blue_dark"
+        app:tabSelectedTextColor="@color/primary_blue"
         app:tabTextColor="@android:color/darker_gray">
 
         <com.google.android.material.tabs.TabItem

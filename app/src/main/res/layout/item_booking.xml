@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:text="Cancel Booking"
                 android:textAllCaps="false"
-                android:textColor="@android:color/holo_blue_dark"
+                android:textColor="@color/primary_blue"
                 android:textSize="14sp" />
 
             <Button

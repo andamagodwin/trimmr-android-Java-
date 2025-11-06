@@ -79,7 +79,7 @@
                 android:paddingBottom="12dp"
                 android:text="Hair Styling"
                 android:textAllCaps="false"
-                android:textColor="#FF00FF"
+                android:textColor="@color/primary_blue"
                 android:textSize="16sp" />
 
             <Button
@@ -95,7 +95,7 @@
                 android:paddingBottom="12dp"
                 android:text="Nail Art"
                 android:textAllCaps="false"
-                android:textColor="#FF00FF"
+                android:textColor="@color/primary_blue"
                 android:textSize="16sp" />
 
             <Button
@@ -110,7 +110,7 @@
                 android:paddingBottom="12dp"
                 android:text="Massage"
                 android:textAllCaps="false"
-                android:textColor="#FF00FF"
+                android:textColor="@color/primary_blue"
                 android:textSize="16sp" />
 
         </LinearLayout>

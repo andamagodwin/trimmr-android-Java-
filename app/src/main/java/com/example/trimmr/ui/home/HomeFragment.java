@@ -81,7 +81,7 @@ public class HomeFragment extends Fragment {
         
         for (Button btn : otherButtons) {
             btn.setBackgroundResource(R.drawable.button_service_unselected);
-            btn.setTextColor(getResources().getColor(android.R.color.holo_purple, null));
+            btn.setTextColor(getResources().getColor(R.color.primary_blue, null));
         }
         
         // Filter salons
