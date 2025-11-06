@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Trimmr</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_booking">Booking</string>
     <string name="title_notifications">Notifications</string>
+    <string name="banner_description">Home banner image</string>
 </resources>
