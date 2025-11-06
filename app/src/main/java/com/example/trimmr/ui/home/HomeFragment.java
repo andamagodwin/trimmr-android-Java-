@@ -113,7 +113,7 @@ public class HomeFragment extends Fragment {
     }
 
     private View createSalonCard(Salon salon) {
-        View cardView = getLayoutInflater().inflate(R.layout.item_salon, null);
+        View cardView = getLayoutInflater().inflate(R.layout.item_salon, binding.salonsContainer, false);
         
         ImageView salonImage = cardView.findViewById(R.id.salon_image);
         TextView salonName = cardView.findViewById(R.id.salon_name);
