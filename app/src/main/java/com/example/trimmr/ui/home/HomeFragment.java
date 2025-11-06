@@ -24,8 +24,9 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // ViewModel observation removed as we now have static content
+        // You can add dynamic content handling here if needed
+        
         return root;
     }
 
